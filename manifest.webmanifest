@@ -1,0 +1,19 @@
+{
+  "name": "Husbil Smart Control – Demo",
+  "short_name": "Husbil Demo",
+  "description": "Fristående ofarlig visningsdemo för iPhone",
+  "lang": "sv",
+  "start_url": "./",
+  "scope": "./",
+  "display": "standalone",
+  "background_color": "#101927",
+  "theme_color": "#101927",
+  "icons": [
+    {
+      "src": "./icon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any"
+    }
+  ]
+}
