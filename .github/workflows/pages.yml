@@ -30,7 +30,10 @@ jobs:
           html=pathlib.Path('index.html').read_text()
           data=json.loads(pathlib.Path('manifest.webmanifest').read_text())
           assert "ENDAST DEMO" in html and data["start_url"]=="./"
-          assert len(re.findall(r'\bfetch\s*\(',html)) == 1\n          assert 'https://api.open-meteo.com/v1/forecast?' in html\n          assert 'fetch(url,{cache:"no-store"})' in html\n          assert not re.search(r'\b(WebSocket|XMLHttpRequest|EventSource)\s*\(',html)
+          assert len(re.findall(r'\bfetch\s*\(',html)) == 1 
+          assert 'https://api.open-meteo.com/v1/forecast?' in html 
+          assert 'fetch(url,{cache:"no-store"})' in html 
+          assert not re.search(r'\b(WebSocket|XMLHttpRequest|EventSource)\s*\(',html)
           assert not re.search(r'/api/|navigator\.bluetooth|navigator\.serial',html,re.I)
           print("Only a safe visual demo is published")
           PY
